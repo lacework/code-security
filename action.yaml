@@ -3,9 +3,13 @@ description: "Scan code with Lacework's Code Security offering"
 author: 'Lacework'
 inputs:
   classpath:
-    description: 'Specify the Java classpath'
+    description: 'Specify the Java classpath for SAST analysis'
     required: false
-    default: '.'
+    default: ''
+  libpath:
+    description: 'Specify the Java libpath for SAST analysis'
+    required: false
+    default: ''
   classes:
     description: 'Classes directory or JAR file to analyze (DEPRECATED)'
     required: false
