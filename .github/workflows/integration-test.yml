@@ -64,5 +64,6 @@ jobs:
           echo "Got $SCA_RESULTS from SCA"
           if [ "$SCA_RESULTS" != "$expectedScaResults" ]; then
             echo "::error::Expected to have $expectedScaResults SCA results!"
+            grep -nH "ruleId" sca.sarif
             exit 1
           fi
